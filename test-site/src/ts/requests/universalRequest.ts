@@ -1,4 +1,4 @@
-import { QueryTrigger, UniversalSearchRequest } from '@yext/search-core';
+import { QueryTrigger, UniversalSearchRequest } from 'anguyen-search-core-testt';
 
 const universalRequest: UniversalSearchRequest = {
   query: 'office near me',

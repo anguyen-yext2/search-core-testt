@@ -1,4 +1,4 @@
-import { provideCore, SearchConfig, SearchCore, UniversalSearchRequest, UniversalSearchResponse } from '@yext/search-core';
+import { provideCore, SearchConfig, SearchCore, UniversalSearchRequest, UniversalSearchResponse } from 'anguyen-search-core-testt';
 import { verticalRequest, functionVerticalRequest } from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
@@ -8,9 +8,9 @@ import initDirectAnswers from './initDirectAnswers';
 
 const coreConfig: SearchConfig = {
   apiKey: process.env.API_KEY,
-  experienceKey: 'developer-support-test',
+  experienceKey: 'max-test',
   locale: 'en',
-  experienceVersion: 'PRODUCTION',
+  experienceVersion: '59',
 };
 
 const element = document.createElement('pre');

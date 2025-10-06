@@ -1,4 +1,4 @@
-import { GenerativeDirectAnswerRequest, Source } from '@yext/search-core';
+import { GenerativeDirectAnswerRequest, Source } from 'anguyen-search-core-testt';
 
 const generativeDirectAnswerRequest: GenerativeDirectAnswerRequest = {
   searchId: '018f5ddc-ef70-2c66-a9c2-62fb5444967d',
