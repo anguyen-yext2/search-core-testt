@@ -14,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: Release
     steps:
-      - name: Debug GitHub ref_name
-        run: echo "github.ref_name is ${{ github.ref_name }}"
-        
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -30,7 +27,7 @@ jobs:
           cache: "npm"
 
       - name: Install deps
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts
 
       - name: Update npm
         # npm version npm 11.5.1 or later needed for Trusted Publishing
