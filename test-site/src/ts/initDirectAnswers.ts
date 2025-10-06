@@ -1,4 +1,4 @@
-import { BuiltInFieldType, DirectAnswerType, FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from '@yext/search-core';
+import { BuiltInFieldType, DirectAnswerType, FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from 'anguyen-search-core-testt';
 import { directAnswer } from './index';
 
 /**
