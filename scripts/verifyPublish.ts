@@ -1,4 +1,4 @@
-import { args, getPackageInfo, packageName } from './releaseUtils.js';
+import { args, getPackageInfo } from './releaseUtils.js';
 
 (async () => {
   const tag = args._[0];
@@ -10,7 +10,8 @@ import { args, getPackageInfo, packageName } from './releaseUtils.js';
 
   const [pkgName, version] = tag.split('@');
 
-  const { currentVersion } = await getPackageInfo();
+  const { pkg, currentVersion } = await getPackageInfo();
+  const packageName = pkg.name;
   if (pkgName !== packageName) {
     console.error(
       `Package name from tag '${pkgName}' mismatches with package '${packageName}'`

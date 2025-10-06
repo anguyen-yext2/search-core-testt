@@ -11,7 +11,6 @@ import {
   getVersionChoices,
   isDryRun,
   logRecentCommits,
-  packageName,
   run,
   runIfNotDry,
   step,
@@ -21,9 +20,11 @@ import {
 (async () => {
   let targetVersion: string | undefined;
 
-  await logRecentCommits();
+  const { currentVersion, pkg, pkgPath, pkgDir } = await getPackageInfo();
 
-  const { currentVersion, pkgPath, pkgDir } = await getPackageInfo();
+  const packageName = pkg.name;
+
+  await logRecentCommits(packageName);
 
   if (!targetVersion) {
     const { release }: { release: string } = await prompts({
@@ -74,7 +75,7 @@ import {
   updateVersion(pkgDir, pkgPath, targetVersion);
 
   step('\nGenerating changelog...');
-  const latestTag = await getLatestTag();
+  const latestTag = await getLatestTag(packageName);
   if (!latestTag) {
     step('\nNo previous tag, skipping changelog generation.');
   } else {
