@@ -19,18 +19,15 @@ jobs:
         with:
           ref: master
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4.0.0
-
       - name: Set node version to 20.x
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
           registry-url: https://registry.npmjs.org/
-          cache: "pnpm"
+          cache: "npm"
 
       - name: Install deps
-        run: pnpm install --ignore-scripts --frozen-lockfile
+        run: npm ci --ignore-scripts
 
       - name: Update npm
         # npm version npm 11.5.1 or later needed for Trusted Publishing
@@ -39,7 +36,7 @@ jobs:
       - name: Verify package version and get npm tag
         id: get_npm_tag
         run: |
-          TAG=$(pnpm run ci-verify-publish ${{ github.ref_name }} | tail -n 1)
+          TAG=$(npm run ci-verify-publish ${{ github.ref_name }} | tail -n 1)
           echo "npm_tag=$TAG" >> $GITHUB_OUTPUT
 
       - name: Publish
