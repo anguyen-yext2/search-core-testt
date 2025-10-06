@@ -11,20 +11,19 @@ import {
   getVersionChoices,
   isDryRun,
   logRecentCommits,
+  packageName,
   run,
   runIfNotDry,
   step,
   updateVersion,
 } from './releaseUtils.js';
 
-const pkgName = 'anguyen-search-core-testt';
-
 (async () => {
   let targetVersion: string | undefined;
 
-  await logRecentCommits(pkgName);
+  await logRecentCommits();
 
-  const { currentVersion, pkgPath, pkgDir } = await getPackageInfo(pkgName);
+  const { currentVersion, pkgPath, pkgDir } = await getPackageInfo();
 
   if (!targetVersion) {
     const { release }: { release: string } = await prompts({
@@ -52,7 +51,7 @@ const pkgName = 'anguyen-search-core-testt';
     process.exit(1);
   }
 
-  const tag = `${pkgName}@${targetVersion}`;
+  const tag = `${packageName}@${targetVersion}`;
 
   if (targetVersion.includes('beta') && !args.tag) {
     args.tag = 'beta';
@@ -75,7 +74,7 @@ const pkgName = 'anguyen-search-core-testt';
   updateVersion(pkgDir, pkgPath, targetVersion);
 
   step('\nGenerating changelog...');
-  const latestTag = await getLatestTag(pkgName);
+  const latestTag = await getLatestTag();
   if (!latestTag) {
     step('\nNo previous tag, skipping changelog generation.');
   } else {

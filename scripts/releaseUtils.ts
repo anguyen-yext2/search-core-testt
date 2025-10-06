@@ -17,6 +17,8 @@ export const args = minimist(process.argv.slice(2));
 
 export const isDryRun = !!args.dry;
 
+export const packageName = 'anguyen-search-core-testt';
+
 if (isDryRun) {
   console.log(colors.inverse(colors.yellow(' DRY RUN ')));
   console.log();
@@ -29,7 +31,7 @@ interface Pkg {
   version: string,
   private?: boolean
 }
-export async function getPackageInfo(pkgName: string): Promise<{
+export async function getPackageInfo(): Promise<{
   pkg: Pkg,
   pkgDir: string,
   pkgPath: string,
@@ -45,7 +47,7 @@ export async function getPackageInfo(pkgName: string): Promise<{
   const currentVersion = pkg.version;
 
   if (pkg.private) {
-    console.error(`Package ${pkgName} is private`);
+    console.error(`Package ${packageName} is private`);
     process.exit(1);
   }
 
@@ -163,19 +165,19 @@ export function updateVersion(pkgDir: string, pkgPath: string, version: string):
   execSync('npm install', { cwd: pkgDir, stdio: 'inherit' });
 }
 
-export async function getLatestTag(pkgName: string): Promise<string> {
+export async function getLatestTag(): Promise<string> {
   const tags = (await run('git', ['tag'], { stdio: 'pipe' })).stdout
     .split(/\n/)
     .filter(Boolean);
-  const prefix = `${pkgName}@`;
+  const prefix = `${packageName}@`;
   return tags
     .filter((tag) => tag.startsWith(prefix))
     .sort()
     .reverse()[0];
 }
 
-export async function logRecentCommits(pkgName: string): Promise<void> {
-  const tag = await getLatestTag(pkgName);
+export async function logRecentCommits(): Promise<void> {
+  const tag = await getLatestTag(packageName);
   if (!tag) return;
   const sha = await run('git', ['rev-list', '-n', '1', tag], {
     stdio: 'pipe',
@@ -183,7 +185,7 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
   console.log(
     colors.bold(
       `\n${colors.blue('i')} Commits of ${colors.green(
-        pkgName
+        packageName
       )} since ${colors.green(tag)} ${colors.gray(`(${sha.slice(0, 5)})`)}`
     )
   );
