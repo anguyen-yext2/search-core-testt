@@ -1,6 +1,6 @@
 {
   "name": "anguyen-search-core-testt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
@@ -42,7 +42,8 @@
     "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp && npm run generate-notices",
     "generate-notices": "generate-license-file --input package.json --output THIRD-PARTY-NOTICES --overwrite",
     "ci-verify-publish": "tsx scripts/verifyPublish.ts",
-    "release": "tsx scripts/release.ts"
+    "release": "tsx scripts/release.ts",
+    "release:dry": "tsx scripts/release.ts --dry-run"
   },
   "repository": {
     "type": "git",
