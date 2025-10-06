@@ -1,6 +1,6 @@
 {
   "name": "anguyen-search-core-testt",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
@@ -47,14 +47,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yext/search-core.git"
+    "url": "https://github.com/anguyen-yext2/search-core-testt.git"
   },
   "author": "slapshot@yext.com",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/yext/search-core/issues"
+    "url": "https://github.com/anguyen-yext2/search-core-testt/issues"
   },
-  "homepage": "https://github.com/yext/search-core#readme",
+  "homepage": "https://github.com/anguyen-yext2/search-core-testt#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.23.2",
