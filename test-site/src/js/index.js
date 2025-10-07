@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { provideCore } from 'anguyen-search-core-testt';
+import { provideCore } from 'anguyen-search-core-testtt';
 import { verticalRequest, functionVerticalRequest } from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';

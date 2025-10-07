@@ -1,4 +1,4 @@
-import { provideCore, SearchConfig, SearchCore, UniversalSearchRequest, UniversalSearchResponse } from 'anguyen-search-core-testt';
+import { provideCore, SearchConfig, SearchCore, UniversalSearchRequest, UniversalSearchResponse } from 'anguyen-search-core-testtt';
 import { verticalRequest, functionVerticalRequest } from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
