@@ -1,4 +1,4 @@
-import { GenerativeDirectAnswerRequest, Source } from 'anguyen-search-core-testt';
+import { GenerativeDirectAnswerRequest, Source } from 'anguyen-search-core-testtt';
 
 const generativeDirectAnswerRequest: GenerativeDirectAnswerRequest = {
   searchId: '018f5ddc-ef70-2c66-a9c2-62fb5444967d',

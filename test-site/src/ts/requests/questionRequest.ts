@@ -1,4 +1,4 @@
-import { QuestionSubmissionRequest } from 'anguyen-search-core-testt';
+import { QuestionSubmissionRequest } from 'anguyen-search-core-testtt';
 
 const questionRequest: QuestionSubmissionRequest = {
   email: 'oshi@yext.com',
