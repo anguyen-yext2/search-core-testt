@@ -1,4 +1,4 @@
-import { BuiltInFieldType, DirectAnswerType, FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from 'anguyen-search-core-testt';
+import { BuiltInFieldType, DirectAnswerType, FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from 'anguyen-search-core-testtt';
 import { directAnswer } from './index';
 
 /**

@@ -1,4 +1,4 @@
-import { QueryTrigger, VerticalSearchRequest } from 'anguyen-search-core-testt';
+import { QueryTrigger, VerticalSearchRequest } from 'anguyen-search-core-testtt';
 
 export const verticalRequest: VerticalSearchRequest = {
   verticalKey: 'people',

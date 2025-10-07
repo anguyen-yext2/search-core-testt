@@ -3,7 +3,7 @@ import {
   VerticalAutocompleteRequest,
   FilterSearchRequest,
   Matcher
-} from 'anguyen-search-core-testt';
+} from 'anguyen-search-core-testtt';
 
 export const univeralAutocompleteRequest: UniversalAutocompleteRequest = {
   input: 'virginiaa',

@@ -1,4 +1,4 @@
-import { QueryTrigger, UniversalSearchRequest } from 'anguyen-search-core-testt';
+import { QueryTrigger, UniversalSearchRequest } from 'anguyen-search-core-testtt';
 
 const universalRequest: UniversalSearchRequest = {
   query: 'office near me',
