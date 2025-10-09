@@ -1,5 +1,12 @@
 #### 1.2.2 (2025-10-09)
 
+##### Other Changes
+
+*  anguyen-search-core-testtt@1.2.2 ([e1b3c90e](https://github.com/anguyen-yext2/search-core-testt/commit/e1b3c90ee4f81b43304c1cd8dbd65d326fe45ca1))
+*  anguyen-search-core-testtt@1.2.2 ([64102e24](https://github.com/anguyen-yext2/search-core-testt/commit/64102e24ea04196aafb0b1db023604296c071024))
+
+#### 1.2.2 (2025-10-09)
+
 #### 1.2.2 (2025-10-09)
 
 #### 1.2.1 (2025-10-09)
