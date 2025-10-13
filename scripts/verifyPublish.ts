@@ -8,16 +8,9 @@ import { args, getPackageInfo } from './releaseUtils.js';
     process.exit(1);
   }
 
-  const [pkgName, version] = tag.split('@');
+  const [, version] = tag.split('v');
 
-  const { pkg, currentVersion } = await getPackageInfo();
-  const packageName = pkg.name;
-  if (pkgName !== packageName) {
-    console.error(
-      `Package name from tag '${pkgName}' mismatches with package '${packageName}'`
-    );
-    process.exit(1);
-  }
+  const { currentVersion } = await getPackageInfo();
   if (currentVersion !== version) {
     console.error(
       `Package version from tag '${version}' mismatches with current version '${currentVersion}'`
