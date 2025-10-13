@@ -1,6 +1,6 @@
 {
   "name": "anguyen-search-core-testtt",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
