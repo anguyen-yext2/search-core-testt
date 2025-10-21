@@ -16,4 +16,4 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v4
         - name: Publish
-          uses: anguyen-yext2/slapshot-reusable-workflows-test/.github/workflows/publish.yml@v1
+          uses: anguyen-yext2/slapshot-reusable-workflows-test/publish.yml@v1
